@@ -1,0 +1,110 @@
+/* ——— Pixel Grid ——— */
+#grid-lens-pixel-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  pointer-events: none;
+  display: none;
+}
+
+#grid-lens-pixel-grid.active {
+  display: block;
+}
+
+/* ——— Element Boxes ——— */
+.grid-lens-element-box {
+  outline: 1px solid rgba(255, 0, 0, 0.3) !important;
+}
+
+.grid-lens-element-box-d2 {
+  outline-color: rgba(255, 0, 0, 0.4) !important;
+}
+
+.grid-lens-element-box-d3 {
+  outline-color: rgba(255, 0, 0, 0.5) !important;
+}
+
+.grid-lens-element-box-d4 {
+  outline-color: rgba(255, 0, 0, 0.6) !important;
+}
+
+/* ——— Hover Inspect ——— */
+#grid-lens-inspect-highlight {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483645;
+  border: 2px solid #0070f3;
+  background: rgba(0, 112, 243, 0.06);
+  display: none;
+  transition: top 0.08s, left 0.08s, width 0.08s, height 0.08s;
+}
+
+#grid-lens-inspect-tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483647;
+  display: none;
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  background: #0a0a0a;
+  color: #ededed;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+#grid-lens-inspect-tooltip .gl-tag {
+  color: #0070f3;
+  font-weight: 600;
+}
+
+#grid-lens-inspect-tooltip .gl-dim {
+  color: #ededed;
+}
+
+#grid-lens-inspect-tooltip .gl-detail {
+  color: #888;
+  font-size: 10px;
+}
+
+/* ——— Rulers ——— */
+#grid-lens-ruler-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  z-index: 2147483644;
+  pointer-events: none;
+  background: #0a0a0a;
+  border-bottom: 1px solid #333;
+  display: none;
+  overflow: hidden;
+}
+
+#grid-lens-ruler-left {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  z-index: 2147483644;
+  pointer-events: none;
+  background: #0a0a0a;
+  border-right: 1px solid #333;
+  display: none;
+  overflow: hidden;
+}
+
+#grid-lens-ruler-top.active,
+#grid-lens-ruler-left.active {
+  display: block;
+}
+
+#grid-lens-ruler-top canvas,
+#grid-lens-ruler-left canvas {
+  display: block;
+}
